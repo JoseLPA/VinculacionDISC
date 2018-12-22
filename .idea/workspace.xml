@@ -2,196 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="939d4d3c-150a-4a90-9b3a-0ea1b902a917" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/database/seeds/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/svg/403.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/svg/404.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/svg/500.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/public/svg/503.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/sass/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/webpack.mix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LaraStock/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/PostController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Controllers/pruebaController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/app/post.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/factories/PostFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/migrations/2018_10_31_153105_create_posts_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/database/seeds/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/svg/403.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/svg/404.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/svg/500.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/public/svg/503.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/sass/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/views/about.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/views/layout.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/views/posts/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proyecto/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,10 +49,11 @@
     <session id="-1859231194">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -249,6 +63,8 @@
           <entry key="aprendizaje_servicio_convenio" value="1" />
           <entry key="aprendizaje_servicios" value="2" />
           <entry key="convenios" value="4" />
+          <entry key="env" value="2" />
+          <entry key="example" value="1" />
           <entry key="migrations" value="2" />
           <entry key="php" value="42" />
           <entry key="sql" value="2" />
@@ -259,6 +75,7 @@
         <counts>
           <entry key="Database Element" value="16" />
           <entry key="PHP" value="42" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -282,19 +99,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="das://d1024bfb-7a6d-4d51-85c1-4ce256021cbe/schema/homestead/table/convenios">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <entry file="file://$PROJECT_DIR$/.env.example">
+          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <filtering enabled="true" />
+              <caret selection-end-line="38" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://d1024bfb-7a6d-4d51-85c1-4ce256021cbe/schema/homestead/table/aprendizaje_servicios">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -302,7 +119,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -326,6 +143,7 @@
         <option value="$PROJECT_DIR$/app/AprendizajeServicio.php" />
         <option value="$PROJECT_DIR$/app/Convenio.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -450,28 +268,6 @@
               <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
               <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -511,17 +307,18 @@
       <updated>1545439804652</updated>
       <workItem from="1545439808396" duration="8390000" />
       <workItem from="1545485962419" duration="473000" />
+      <workItem from="1545500885230" duration="1036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8863000" />
+    <option name="totallyTimeSpent" value="9899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="48" width="1400" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2569956" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -540,7 +337,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32916054" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32916054" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -572,13 +369,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -771,6 +561,23 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="38" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
