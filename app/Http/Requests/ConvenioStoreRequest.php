@@ -28,7 +28,7 @@ class ConvenioStoreRequest extends FormRequest
             'nombre_empresa' => 'required',
             'tipo' => 'required|in:Capstone,Marco,Específico,A+S',
             'fecha_inicio' => 'required',
-            'evidencia' => 'required',
+            'evidencia' => 'required|mimes:pdf',
             'duracion' => 'required',
         ];
     }

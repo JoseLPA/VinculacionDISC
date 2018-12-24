@@ -96,8 +96,8 @@ class ConvenioController extends Controller
     {
         $convenio = Convenio::find($id);
         $usuario = User::find($convenio->user_id);
-        $actividad_extension_convenios = ActividadExtensionConvenio::find($convenio->id);
-        $aprendizaje_servicio_convenios = AprendizajeServicioConvenio::find($convenio->id);
+        $actividad_extension_convenios = ActividadExtensionConvenio::all();
+        $aprendizaje_servicio_convenios = AprendizajeServicioConvenio::all();
         return view('convenio.show',compact('convenio','usuario','actividad_extension_convenios','aprendizaje_servicio_convenios'));
     }
 
