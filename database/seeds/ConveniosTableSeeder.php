@@ -13,10 +13,26 @@ class ConveniosTableSeeder extends Seeder
     {
         App\Convenio::create([
             'nombre_empresa' => 'Apple',
-            'tipo' => 'No se',
+            'tipo' => 'Capstone',
             'fecha_inicio' => '2000-05-03',
             'evidencia' => 'Evidencia',
             'duracion' => '5',
+            'user_id' => '1'
+        ]);
+        App\Convenio::create([
+            'nombre_empresa' => 'Microsoft',
+            'tipo' => 'Marco',
+            'fecha_inicio' => '2001-05-03',
+            'evidencia' => 'Evidencia',
+            'duracion' => '5',
+            'user_id' => '2'
+        ]);
+        App\Convenio::create([
+            'nombre_empresa' => 'Minera',
+            'tipo' => 'A+S',
+            'fecha_inicio' => '2000-05-03',
+            'evidencia' => 'Evidencia',
+            'duracion' => '4',
             'user_id' => '1'
         ]);
     }

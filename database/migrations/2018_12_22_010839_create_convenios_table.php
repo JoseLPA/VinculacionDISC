@@ -17,7 +17,7 @@ class CreateConveniosTable extends Migration
             $table->increments('id');
 
             $table->string('nombre_empresa',128);
-            $table->string('tipo',128);
+            $table->enum('tipo', ['Capstone', 'Marco','Específico','A+S'])->default('Capstone');
             $table->date('fecha_inicio');
             $table->string('evidencia',128);
             $table->integer('duracion');

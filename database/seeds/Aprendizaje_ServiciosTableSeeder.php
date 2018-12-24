@@ -21,5 +21,16 @@ class Aprendizaje_ServiciosTableSeeder extends Seeder
             'evidencia' => 'Hola',
             'user_id' => '1'
         ]);
+
+        App\AprendizajeServicio::create([
+            'nombre_asignatura' => 'Taller de programacion',
+            'nombre_profesor' => 'Peleao',
+            'cantidad_estudiantes' => '10',
+            'nombre_socio' => 'UCN',
+            'semestre' => '1',
+            'año' => '2018',
+            'evidencia' => 'Hola',
+            'user_id' => '1'
+        ]);
     }
 }
