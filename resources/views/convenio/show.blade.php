@@ -34,6 +34,7 @@
                                 @endif
                             @endforeach
                         </ul>
+                        <p><strong>Evidencia del convenio (PDF):</strong></p>
                         <iframe src="{{$convenio->evidencia}}" frameborder="0" style="width:100%;min-height:640px;"></iframe>
                         <br>
                         <a href="{{ route( 'AdmConvenio' )}}" class="btn btn-sm btn-primary float-left">Atrás</a>

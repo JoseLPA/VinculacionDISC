@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="939d4d3c-150a-4a90-9b3a-0ea1b902a917" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VinculacionDISC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VinculacionDISC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ConvenioStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ConvenioStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_22_010839_create_convenios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_22_010839_create_convenios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/Actividad_ExtensionesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/Actividad_ExtensionesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/Aprendizaje_ServiciosTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/Aprendizaje_ServiciosTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/convenio/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/convenio/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,16 +82,16 @@
           <entry key="env" value="2" />
           <entry key="example" value="1" />
           <entry key="migrations" value="2" />
-          <entry key="php" value="121" />
+          <entry key="php" value="125" />
           <entry key="sql" value="2" />
           <entry key="users" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="33" />
+          <entry key="Blade" value="35" />
           <entry key="Database Element" value="35" />
-          <entry key="PHP" value="88" />
+          <entry key="PHP" value="90" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
@@ -116,14 +100,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="103" />
-          <entry key="php" value="8576" />
+          <entry key="php" value="8742" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="3868" />
-          <entry key="PHP" value="4708" />
+          <entry key="Blade" value="3897" />
+          <entry key="PHP" value="4845" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="Scratch" value="103" />
         </counts>
@@ -144,11 +128,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/convenio/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="99" column="39" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="39" />
+            <state relative-caret-position="-204">
+              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
               <folding>
                 <element signature="e#40#67#0#PHP" expanded="true" />
               </folding>
@@ -156,14 +149,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/convenio/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="540">
+              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
               <folding>
                 <element signature="e#2543#2579#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -218,7 +220,6 @@
         <option value="$PROJECT_DIR$/resources/views/convenio/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_22_010839_create_convenios_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/Actividad_ExtensionesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/Aprendizaje_ServiciosTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/ActividadExtensionConvenio.php" />
@@ -228,9 +229,10 @@
         <option value="$PROJECT_DIR$/resources/views/convenio/edit.blade.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/resources/views/convenio/partials/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ConvenioStoreRequest.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/convenio/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php" />
       </list>
     </option>
   </component>
@@ -361,20 +363,28 @@
             <path>
               <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
               <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
               <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
               <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="convenio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VinculacionDISC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VinculacionDISC" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="convenio" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -417,12 +427,12 @@
       <workItem from="1545485962419" duration="473000" />
       <workItem from="1545500885230" duration="1036000" />
       <workItem from="1545579361994" duration="34867000" />
-      <workItem from="1545657886959" duration="4408000" />
+      <workItem from="1545657886959" duration="5907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49174000" />
+    <option name="totallyTimeSpent" value="50673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -659,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_22_010839_create_convenios_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -736,27 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/convenio/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/convenio/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="59" column="82" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/convenio/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/convenio/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -785,13 +767,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/convenio/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="99" column="39" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="39" />
-          <folding>
-            <element signature="e#40#67#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ConveniosTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -804,11 +790,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/convenio/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="540">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
           <folding>
             <element signature="e#2543#2579#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvenioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/convenio/partials/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="59" column="82" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/convenio/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>

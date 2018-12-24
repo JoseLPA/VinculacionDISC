@@ -58,23 +58,25 @@ class ConvenioController extends Controller
         $convenio = Convenio::create($request->all());
 
         $actividad_extension_convenios = $request->input('actividadesExtension');
-        foreach ($actividad_extension_convenios as $valor) {
-            $actividadExtensionConvenio = new ActividadExtensionConvenio();
-            $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
-            $actividadExtensionConvenio->actividad_extension_id = $valor;
-            $actividadExtensionConvenio->convenio_id= $convenio->id;
-            $actividadExtensionConvenio->save();
+        if($actividad_extension_convenios != null){
+            foreach ($actividad_extension_convenios as $valor) {
+                $actividadExtensionConvenio = new ActividadExtensionConvenio();
+                $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
+                $actividadExtensionConvenio->actividad_extension_id = $valor;
+                $actividadExtensionConvenio->convenio_id= $convenio->id;
+                $actividadExtensionConvenio->save();
+            }
         }
-
         $aprendizaje_servicio_convenios = $request->input('aprendizajeServicios');
-        foreach ($aprendizaje_servicio_convenios as $valor) {
-            $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
-            $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
-            $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
-            $aprendizajeServicioConvenio->convenio_id= $convenio->id;
-            $aprendizajeServicioConvenio->save();
+        if($aprendizaje_servicio_convenios != null){
+            foreach ($aprendizaje_servicio_convenios as $valor) {
+                $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
+                $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
+                $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
+                $aprendizajeServicioConvenio->convenio_id= $convenio->id;
+                $aprendizajeServicioConvenio->save();
+            }
         }
-
         //Evidencia
 
         if($request->file('evidencia')){
@@ -152,23 +154,25 @@ class ConvenioController extends Controller
         }
 
         $actividad_extension_convenios = $request->input('actividadesExtension');
-        foreach ($actividad_extension_convenios as $valor) {
-            $actividadExtensionConvenio = new ActividadExtensionConvenio();
-            $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
-            $actividadExtensionConvenio->actividad_extension_id = $valor;
-            $actividadExtensionConvenio->convenio_id= $convenio->id;
-            $actividadExtensionConvenio->save();
+        if($actividad_extension_convenios != null){
+            foreach ($actividad_extension_convenios as $valor) {
+                $actividadExtensionConvenio = new ActividadExtensionConvenio();
+                $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
+                $actividadExtensionConvenio->actividad_extension_id = $valor;
+                $actividadExtensionConvenio->convenio_id= $convenio->id;
+                $actividadExtensionConvenio->save();
+            }
         }
-
         $aprendizaje_servicio_convenios = $request->input('aprendizajeServicios');
-        foreach ($aprendizaje_servicio_convenios as $valor) {
-            $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
-            $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
-            $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
-            $aprendizajeServicioConvenio->convenio_id= $convenio->id;
-            $aprendizajeServicioConvenio->save();
+        if($aprendizaje_servicio_convenios != null){
+            foreach ($aprendizaje_servicio_convenios as $valor) {
+                $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
+                $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
+                $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
+                $aprendizajeServicioConvenio->convenio_id= $convenio->id;
+                $aprendizajeServicioConvenio->save();
+            }
         }
-
         if($request->file('evidencia')){
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $convenio->fill(['evidencia' => asset($path)])->save();
