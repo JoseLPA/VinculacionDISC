@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/k', function () {
     return view('welcome');
+
+
 });
+
+Route::get('/ActividadExtension', 'ControllerActividadExtension@index');
+Route::post('/ActividadExtension', 'ControllerActividadExtension@opcion');
+Route::get('/ActividadExtension/agregar', 'ControllerActividadExtension@agregar');
+Route::post('/ActividadExtension/agregar', 'ControllerActividadExtension@agregar');
+
+
+ 

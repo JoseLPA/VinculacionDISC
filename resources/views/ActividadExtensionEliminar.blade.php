@@ -63,7 +63,7 @@
 
 
 <header>
-    <h1>Registrar actividad de extension</h1>
+    <h1>Eliminar actividad de extension</h1>
 </header>
 <!-- Content -->
 <section>
