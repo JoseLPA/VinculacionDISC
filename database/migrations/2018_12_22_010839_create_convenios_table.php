@@ -14,7 +14,7 @@ class CreateConveniosTable extends Migration
     public function up()
     {
         Schema::create('convenios', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');//Se incrementa automaticamente
 
             $table->string('nombre_empresa',128);
             $table->enum('tipo', ['Capstone', 'Marco','Específico','A+S'])->default('Capstone');
