@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/k', function () {
     return view('welcome');
+
+
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/ActividadExtension', 'ControllerActividadExtension@index');
+Route::post('/ActividadExtension', 'ControllerActividadExtension@opcion');
+Route::get('/ActividadExtension/agregar', 'ControllerActividadExtension@agregar');
+Route::post('/ActividadExtension/agregar', 'ControllerActividadExtension@agregar');
+Route::post('/ActividadExtension/buscar', 'ControllerActividadExtension@buscar');
+Route::post('/ActividadExtension/editar', 'ControllerActividadExtension@editar');
+Route::post('/ActividadExtension/eliminar', 'ControllerActividadExtension@eliminar');
