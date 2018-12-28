@@ -1231,8 +1231,9 @@
     </column>
     <column id="287" parent="233" name="tipo">
       <Position>3</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <DataType>enum(&apos;Capstone&apos;, &apos;Marco&apos;, &apos;Específico&apos;, &apos;A+S&apos;)|0e</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Capstone&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="288" parent="233" name="fecha_inicio">
@@ -1350,49 +1351,56 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="236" name="email">
+    <column id="308" parent="236" name="rol">
       <Position>4</Position>
+      <DataType>enum(&apos;Administrador&apos;, &apos;Profesor&apos;, &apos;Secretario/a&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Profesor&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="236" name="email">
+      <Position>5</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="236" name="email_verified_at">
-      <Position>5</Position>
+    <column id="310" parent="236" name="email_verified_at">
+      <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="236" name="password">
-      <Position>6</Position>
+    <column id="311" parent="236" name="password">
+      <Position>7</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="236" name="remember_token">
-      <Position>7</Position>
+    <column id="312" parent="236" name="remember_token">
+      <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="236" name="created_at">
-      <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="313" parent="236" name="updated_at">
+    <column id="313" parent="236" name="created_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="314" parent="236" name="users_email_unique">
+    <column id="314" parent="236" name="updated_at">
+      <Position>10</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="315" parent="236" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="315" parent="236" name="PRIMARY">
+    <key id="316" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="316" parent="236" name="users_email_unique">
+    <key id="317" parent="236" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>

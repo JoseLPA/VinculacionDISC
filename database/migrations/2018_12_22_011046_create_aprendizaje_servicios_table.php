@@ -14,6 +14,7 @@ class CreateAprendizajeServiciosTable extends Migration
     public function up()
     {
         Schema::create('aprendizaje_servicios', function (Blueprint $table) {
+
             $table->increments('id');
 
             $table->string('nombre_asignatura',128);

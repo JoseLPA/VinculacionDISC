@@ -46,7 +46,7 @@
 </div>
 
 <div class="form-group">
-    {{ Form::label('duracion', 'Duracion del convenio') }}
+    {{ Form::label('duracion', 'Duración del convenio') }}
     {{ Form::text('duracion', null, ['class' => 'form-control']) }}
 </div>
 
@@ -59,3 +59,12 @@
     {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary float-right']) }}
     <a href="{{ route( 'AdmConvenio' )}}" class="btn btn-sm btn-primary float-left">Atrás</a>
 </div>
+
+
+@section('scripts')
+    <script>
+        function confirmar_accion() {
+            return confirm('¿Estás seguro de querer realizar esta acción?');
+        }
+    </script>
+@endsection
