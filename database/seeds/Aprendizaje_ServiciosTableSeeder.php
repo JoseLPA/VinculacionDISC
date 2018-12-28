@@ -18,8 +18,8 @@ class Aprendizaje_ServiciosTableSeeder extends Seeder
             'nombre_socio' => 'UCN',
             'semestre' => '2',
             'año' => '2018',
-            'evidencia' => 'Hola',
-            'user_id' => '1'
+            'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
+            'user_id' => '2'
         ]);
 
         App\AprendizajeServicio::create([
@@ -29,7 +29,7 @@ class Aprendizaje_ServiciosTableSeeder extends Seeder
             'nombre_socio' => 'UCN',
             'semestre' => '1',
             'año' => '2018',
-            'evidencia' => 'Hola',
+            'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
             'user_id' => '1'
         ]);
     }
