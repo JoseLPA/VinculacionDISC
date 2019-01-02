@@ -1,9 +1,9 @@
 @extends('layouts.app')
-
+@section('title','Mostrar actividad A+S')
 @section('content')
 <div class="container">
     <div class = "row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-2">
 
             <div class = "card">
                 <div class = "card-header">
@@ -26,9 +26,11 @@
                             @endif
                         @endforeach
                     </ul>
+                    @if($aprendizajeServicio->evidencia != null)
                     <p><strong>Evidencia del Acuerdo (PDF):</strong></p>
                     <iframe src="{{$aprendizajeServicio->evidencia}}" frameborder="0" style="width:100%;min-height:640px;"></iframe>
                     <br>
+                    @endif
                     <a href="{{ route('aprendizajeServicio.index', $aprendizajeServicio->id) }}" class="btn btn-sm btn-primary float-left">Atrás</a>
                 </div>
             </div>

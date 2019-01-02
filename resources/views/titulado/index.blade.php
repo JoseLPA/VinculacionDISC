@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('title','Administrar actividad extensión')
+@section('title','Administrar titulados')
+
 @section('content')
     <div class="container">
         <div class = "row">
@@ -7,8 +8,8 @@
 
                 <div class = "card">
                     <div class = "card-header">
-                        LISTA DE ACTIVIDADES DE EXTENSIÓN
-                        <a href= "{{ route('actividadExtension.create') }}" class = "btn btn-sm btn-primary float-right">Crear</a>
+                        LISTA DE TITULADOS
+                        <a href= "{{ route('titulado.create') }}" class = "btn btn-sm btn-primary float-right">Crear</a>
                     </div>
 
 
@@ -17,23 +18,23 @@
                             <thead>
                             <tr>
                                 <th width="10px">ID</th>
-                                <th>Titulo de la actividad</th>
+                                <th>Nombre del titulado</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($actividadesExtension as $actividadExtension)
+                            @foreach($titulados as $titulado)
                                 <tr>
-                                    @if(Auth::user()->id == $actividadExtension->user_id)
-                                        <td>{{ $actividadExtension->id }}</td>
-                                        <td>{{ $actividadExtension->titulo_actividad }}</td>
+                                    @if(Auth::user()->id == $titulado->user_id)
+                                        <td>{{ $titulado->id }}</td>
+                                        <td>{{ $titulado->nombre_titulado }}</td>
                                         <td width="10px">
-                                            <a href="{{ route('actividadExtension.show', $actividadExtension->id) }}" class="btn btn-sm btn-primary">Ver</a>
+                                            <a href="{{ route('titulado.show', $titulado->id) }}" class="btn btn-sm btn-primary">Ver</a>
                                         </td>
                                         <td width="10px">
-                                            <a href="{{ route('actividadExtension.edit', $actividadExtension->id) }}" class="btn btn-sm btn-primary">Editar</a>
+                                            <a href="{{ route('titulado.edit', $titulado->id) }}" class="btn btn-sm btn-primary">Editar</a>
                                         </td>
                                         <td width="10px">
-                                            {!! Form::open(['route' => ['actividadExtension.destroy', $actividadExtension->id], 'method' => 'DELETE']) !!}
+                                            {!! Form::open(['route' => ['titulado.destroy', $titulado->id], 'method' => 'DELETE']) !!}
                                             <button class="btn btn-sm btn-danger" onclick="return confirmar_accion();">
                                                 Eliminar
                                             </button>
@@ -44,7 +45,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{$actividadesExtension->render()}}
+                        {{$titulados->render()}}
                     </div>
                 </div>
             </div>

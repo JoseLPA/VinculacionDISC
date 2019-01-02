@@ -31,7 +31,7 @@
 </div>
 
 <div class="form-group">
-    {{ Form::label('evidencia', 'Evidencia') }}
+    {{ Form::label('evidencia', 'Evidencia (Formato .pdf, .jpg, .jpeg, .png) ') }}
     {{ Form::file('evidencia') }}
 </div>
 

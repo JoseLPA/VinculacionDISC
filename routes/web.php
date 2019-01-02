@@ -24,3 +24,5 @@ Route::get('AdmActividadExtension','ActividadExtensionController@index')->name('
 Route::resource('actividadExtension','ActividadExtensionController');
 Route::get('AdmAprendizajeServicio','AprendizajeServicioController@index')->name('AdmAprendizajeServicio');
 Route::resource('aprendizajeServicio','AprendizajeServicioController');
+Route::get('AdmTitulado','TituladoController@index')->name('AdmTitulado');
+Route::resource('titulado','TituladoController');

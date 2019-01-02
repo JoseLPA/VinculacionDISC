@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Editar actividad extensión')
+@section('title','Crear titulado')
 @section('content')
     <div class="container">
         <div class = "row">
@@ -7,12 +7,14 @@
 
                 <div class = "card">
                     <div class = "card-header">
-                        Editar actividad de extensión
+                        Crear nuevo titulado
                     </div>
 
                     <div class = "card-body">
-                        {!! Form::model($actividadExtension,['route' => ['actividadExtension.update',$actividadExtension->id], 'method' => 'PUT', 'files' => true]) !!}
-                        @include('actividadExtension.partials.form')
+                        {!! Form::open(['route' => 'titulado.store', 'files' => true]) !!}
+
+                        @include('titulado.partials.form')
+
                         {!! Form::close() !!}
                     </div>
                 </div>
