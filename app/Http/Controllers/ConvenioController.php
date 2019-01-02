@@ -17,6 +17,7 @@ use App\Http\Requests\ConvenioStoreRequest;
 use App\Http\Requests\ConvenioUpdateRequest;
 class ConvenioController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
