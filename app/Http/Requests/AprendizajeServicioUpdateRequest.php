@@ -25,13 +25,12 @@ class AprendizajeServicioUpdateRequest extends FormRequest
     {
         return [
             'user_id' => 'required|integer',
-            'nombre_asignatura' => 'required',
-            'nombre_profesor' => 'required',
-            'cantidad_estudiantes' => 'required',
-            'nombre_asignatura' => 'required',
+            'nombre_asignatura' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'nombre_profesor' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'cantidad_estudiantes' => 'required|integer',
+            'nombre_asignatura' => 'required|regex:/^[a-zA-Z\s]+$/',
             'semestre' => 'required|in:1,2',
-            'año' => 'required',
-            'evidencia' => 'required|mimes:pdf,jpg,jpeg,png',
+            'año' => 'required|integer',
         ];
     }
 }

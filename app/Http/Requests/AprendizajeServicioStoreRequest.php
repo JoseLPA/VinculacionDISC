@@ -21,12 +21,12 @@ class AprendizajeServicioStoreRequest extends FormRequest
     {
         return [
             'user_id' => 'required|integer',
-            'nombre_asignatura' => 'required',
-            'nombre_profesor' => 'required',
-            'cantidad_estudiantes' => 'required',
-            'nombre_socio' => 'required',
+            'nombre_asignatura' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'nombre_profesor' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'cantidad_estudiantes' => 'required|integer',
+            'nombre_socio' => 'required|regex:/^[a-zA-Z\s]+$/',
             'semestre' => 'required|in:1,2',
-            'año' => 'required',
+            'año' => 'required|integer',
             'evidencia' => 'required|mimes:pdf,jpg,jpeg,png',
         ];
     }

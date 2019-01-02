@@ -25,13 +25,12 @@ class ActividadExtensionUpdateRequest extends FormRequest
     {
         return [
             'user_id' => 'required|integer',
-            'titulo_actividad' => 'required',
-            'nombre_expositor' => 'required',
+            'titulo_actividad' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'nombre_expositor' => 'required|regex:/^[a-zA-Z\s]+$/',
             'fecha' => 'required',
             'ubicacion' => 'required',
-            'cantidad_asistentes' => 'required|int',
-            'organizador_actividad' => 'required',
-            'evidencia' => 'required|mimes:pdf,jpg,jpeg,png',
+            'cantidad_asistentes' => 'required|integer',
+            'organizador_actividad' => 'required|regex:/^[a-zA-Z\s]+$/',
         ];
     }
 }

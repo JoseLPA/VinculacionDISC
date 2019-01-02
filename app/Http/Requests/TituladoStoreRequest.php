@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActividadExtensionStoreRequest extends FormRequest
+class TituladoStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,16 @@ class ActividadExtensionStoreRequest extends FormRequest
     public function rules()
     {
         return [
+
+            'nombre_titulado' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'rut_titulado' => 'required|integer',
+            'telefono',
+            'correo_electronico',
+            'empresa',
+            'anio_titulacion' => 'required',
+            'carrera_estudiante' => 'required|regex:/^[a-zA-Z\s]+$/',
+            'evidencia' => 'required',
             'user_id' => 'required|integer',
-            'titulo_actividad' => 'required|regex:/^[a-zA-Z\s]+$/',
-            'nombre_expositor' => 'required|regex:/^[a-zA-Z\s]+$/',
-            'fecha' => 'required',
-            'ubicacion' => 'required',
-            'cantidad_asistentes' => 'required|integer',
-            'organizador_actividad' => 'required|regex:/^[a-zA-Z\s]+$/',
-            'evidencia' => 'required|mimes:pdf,jpg,jpeg,png',
         ];
     }
 }
