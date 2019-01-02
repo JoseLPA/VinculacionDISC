@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateConveniosTable extends Migration
+class CreateTituladosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,17 @@ class CreateConveniosTable extends Migration
      */
     public function up()
     {
-        Schema::create('convenios', function (Blueprint $table) {
-            $table->increments('id');//Se incrementa automaticamente
-
-            $table->string('nombre_empresa',128);
-            $table->enum('tipo', ['Capstone', 'Marco','Específico','A+S'])->default('Capstone');
-            $table->date('fecha_inicio');
-            $table->string('evidencia',128)->nullable();
-            $table->integer('duracion')->nullable();
-
+        Schema::create('titulados', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre_titulado',128);
+            $table->integer('rut_titulado');
+            $table->integer('telefono')->nullable();
+            $table->string('correo_electronico',128)->nullable();
+            $table->string('empresa',128)->nullable();
+            $table->integer('anio_titulacion')->unsigned();
+            $table->string('carrera_estudiante',128);
             $table->integer('user_id')->unsigned();
-
             $table->timestamps();
-
-            //relaciones
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')
@@ -41,6 +38,6 @@ class CreateConveniosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('convenios');
+        Schema::dropIfExists('titulados');
     }
 }

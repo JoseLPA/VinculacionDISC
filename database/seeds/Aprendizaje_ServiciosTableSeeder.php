@@ -19,7 +19,8 @@ class Aprendizaje_ServiciosTableSeeder extends Seeder
             'semestre' => '2',
             'año' => '2018',
             'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
-            'user_id' => '2'
+            'user_id' => '2',
+            'asignatura_id' => '2'
         ]);
 
         App\AprendizajeServicio::create([
@@ -30,7 +31,8 @@ class Aprendizaje_ServiciosTableSeeder extends Seeder
             'semestre' => '1',
             'año' => '2018',
             'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
-            'user_id' => '1'
+            'user_id' => '1',
+            'asignatura_id' => '1'
         ]);
     }
 }
