@@ -15,6 +15,7 @@ class AprendizajeServicio extends Model
         'año',
         'evidencia',
         'user_id',
+        'asignatura_id',
     ];
 
     public function user(){
@@ -23,5 +24,9 @@ class AprendizajeServicio extends Model
 
     public function convenios(){
         return $this->belongsToMany(Convenio::class);
+    }
+
+    public function asignatura(){
+        return $this->belongsTo(Asignatura::class);
     }
 }

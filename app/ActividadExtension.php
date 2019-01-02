@@ -14,7 +14,7 @@ class ActividadExtension extends Model
         'cantidad_asistentes',
         'organizador_actividad',
         'evidencia',
-        'user_id'
+        'user_id',
     ];
 
     public function user(){
@@ -23,5 +23,9 @@ class ActividadExtension extends Model
 
     public function convenios(){
         return $this->belongsToMany(Convenio::class);
+    }
+
+    public function academicos(){
+        return $this->belongsToMany(Academico::class);
     }
 }
