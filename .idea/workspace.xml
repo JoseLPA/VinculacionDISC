@@ -427,6 +427,7 @@
       <workItem from="1545529432023" duration="962000" />
       <workItem from="1545530517077" duration="33290000" />
       <workItem from="1545615685224" duration="2757000" />
+<<<<<<< HEAD
       <workItem from="1545649289744" duration="19350000" />
 =======
 >>>>>>> parent of 65fe6b6... :(
@@ -451,6 +452,14 @@
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="69747000" />
+=======
+      <workItem from="1545649289744" duration="18831000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="69228000" />
+>>>>>>> parent of 10f10ff... :(
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,12 +471,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
 =======
     <option name="totallyTimeSpent" value="9899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="48" width="1400" height="776" extended-state="0" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+>>>>>>> parent of 10f10ff... :(
     <editor active="true" />
 >>>>>>> parent of 65fe6b6... :(
     <layout>
@@ -519,6 +532,7 @@
     <option name="version" value="1" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":(" />
     <option name="LAST_COMMIT_MESSAGE" value=":(" />
@@ -527,6 +541,8 @@
     <option name="myLimit" value="2678400000" />
 >>>>>>> parent of 65fe6b6... :(
   </component>
+=======
+>>>>>>> parent of 10f10ff... :(
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
