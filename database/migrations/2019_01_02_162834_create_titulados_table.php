@@ -22,6 +22,7 @@ class CreateTituladosTable extends Migration
             $table->string('empresa',128)->nullable();
             $table->integer('anio_titulacion')->unsigned();
             $table->string('carrera_estudiante',128);
+            $table->string('evidencia',128);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

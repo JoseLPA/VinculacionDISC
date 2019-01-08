@@ -14,6 +14,7 @@ class Titulado extends Model
         'empresa',
         'anio_titulacion',
         'carrera_estudiante',
+        'evidencia',
         'user_id',
     ];
 

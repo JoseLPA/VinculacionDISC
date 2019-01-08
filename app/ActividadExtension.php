@@ -12,7 +12,6 @@ class ActividadExtension extends Model
         'fecha',
         'ubicacion',
         'cantidad_asistentes',
-        'organizador_actividad',
         'evidencia',
         'user_id',
     ];

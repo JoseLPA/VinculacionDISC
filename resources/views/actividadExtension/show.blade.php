@@ -17,7 +17,14 @@
                         <p><strong>Fecha: </strong>{{$actividadExtension->fecha}}</p>
                         <p><strong>Ubicación: </strong>{{$actividadExtension->ubicacion}}</p>
                         <p><strong>Cantidad de asistentes: </strong>{{$actividadExtension->cantidad_asistentes}}</p>
-                        <p><strong>Organizador: </strong>{{$actividadExtension->organizador_actividad}}</p>
+                        <p><strong>Organizador: </strong></p>
+                        <ul>
+                            @foreach($academico_actividad_extensions as $academico_actividad_extension)
+                                @if($academico_actividad_extension->actividad_extension_id == $actividadExtension->id)
+                                    <li> {{App\Academico::find($academico_actividad_extension->academico_id)->nombre_academico}}</li>
+                                @endif
+                            @endforeach
+                        </ul>
                         <p><strong>Convenios asociados:</strong></p>
                         <ul>
                             @foreach($actividad_extension_convenios as $actividad_extension_convenio)

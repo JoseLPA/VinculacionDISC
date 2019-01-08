@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Academico;
+use App\AcademicoAprendizajeServicio;
 use App\AprendizajeServicioConvenio;
+use App\Asignatura;
 use App\Convenio;
 use App\Http\Requests\AprendizajeServicioStoreRequest;
 use App\Http\Requests\AprendizajeServicioUpdateRequest;
@@ -21,15 +24,18 @@ class AprendizajeServicioController extends Controller
 
     public function index()
     {
+        $asignaturas = Asignatura::orderBy('id','DESC')->paginate();
         $AprendizajesServicios = AprendizajeServicio::orderBy('id', 'DESC')->paginate();
-        return view('aprendizaje_servicio.index', compact('AprendizajesServicios'));
+        return view('aprendizaje_servicio.index', compact('AprendizajesServicios','asignaturas'));
     }
 
 
     public function create()
     {
         $convenios = Convenio::orderBy('id','ASC')->get();
-        return view('aprendizaje_servicio.create', compact('convenios'));
+        $academicos = Academico::orderBy('nombre_academico','ASC')->get();
+        $asignaturas = Asignatura::all();
+        return view('aprendizaje_servicio.create', compact('convenios','academicos','asignaturas'));
     }
 
 
@@ -37,7 +43,9 @@ class AprendizajeServicioController extends Controller
     {
         $aprendizajeServicio = AprendizajeServicio::find($id);
         $actividad_aprendizaje_convenios = AprendizajeServicioConvenio::all();
-        return view('aprendizaje_servicio.show', compact('aprendizajeServicio','actividad_aprendizaje_convenios'));
+        $academico_aprendizaje_servicios = AcademicoAprendizajeServicio::all();
+
+        return view('aprendizaje_servicio.show', compact('aprendizajeServicio','actividad_aprendizaje_convenios', 'academico_aprendizaje_servicios'));
     }
 
 
@@ -55,6 +63,17 @@ class AprendizajeServicioController extends Controller
                 $actividadServicioConvenio->save();
             }
         }
+
+        $aprendizaje_servicio_academicos = $request->input('academicos');
+        if($aprendizaje_servicio_academicos != null){
+            foreach ($aprendizaje_servicio_academicos as $valor) {
+                $aprendizajeServicioAcademico = new AcademicoAprendizajeServicio();
+                $aprendizajeServicioAcademico->fill($request->only('aprendizaje_servicio_id', 'academico_id'));
+                $aprendizajeServicioAcademico->aprendizaje_servicio_id = $aprendizajeServicio->id;
+                $aprendizajeServicioAcademico->academico_id = $valor;
+                $aprendizajeServicioAcademico->save();
+            }
+        }
         //Evidencia
 
         if($request->file('evidencia')){
@@ -70,8 +89,10 @@ class AprendizajeServicioController extends Controller
     public function edit($id)
     {
         $aprendizajeServicio = AprendizajeServicio::find($id);
+        $asignaturas = Asignatura::all();
+        $academicos = Academico::orderBy('nombre_academico','ASC')->get();
         $convenios = Convenio::orderBy('nombre_empresa','ASC')->get();
-        return view('aprendizaje_servicio.edit', compact('aprendizajeServicio','convenios'));
+        return view('aprendizaje_servicio.edit', compact('aprendizajeServicio','convenios','asignaturas','academicos'));
     }
 
 
@@ -95,6 +116,13 @@ class AprendizajeServicioController extends Controller
             }
         }
 
+        $actiAprendizajeAcademicos = AcademicoAprendizajeServicio::all();
+        foreach ($actiAprendizajeAcademicos as $actiAprendizajeAcademico) {
+            if ($actiAprendizajeAcademico->aprendizaje_servicio_id == $aprendizajeServicio->id) {
+                $actiAprendizajeAcademico->delete();
+            }
+        }
+
         $actividad_aprendizaje_convenios = $request->input('convenios');
         if($actividad_aprendizaje_convenios != null){
             foreach ($actividad_aprendizaje_convenios as $valor) {
@@ -103,6 +131,17 @@ class AprendizajeServicioController extends Controller
                 $actividadAprendizajeConvenio->aprendizaje_servicio_id = $aprendizajeServicio->id;
                 $actividadAprendizajeConvenio->convenio_id= $valor;
                 $actividadAprendizajeConvenio->save();
+            }
+        }
+
+        $aprendizaje_servicio_academicos = $request->input('academicos');
+        if($aprendizaje_servicio_academicos != null){
+            foreach ($aprendizaje_servicio_academicos as $valor) {
+                $aprendizajeServicioAcademico = new AcademicoAprendizajeServicio();
+                $aprendizajeServicioAcademico->fill($request->only('aprendizaje_servicio_id', 'academico_id'));
+                $aprendizajeServicioAcademico->aprendizaje_servicio_id = $aprendizajeServicio->id;
+                $aprendizajeServicioAcademico->academico_id = $valor;
+                $aprendizajeServicioAcademico->save();
             }
         }
 

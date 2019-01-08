@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAcademicoExtensionTable extends Migration
+class CreateAcademicoAprendizajeServicioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateAcademicoExtensionTable extends Migration
      */
     public function up()
     {
-        Schema::create('academico_extension', function (Blueprint $table) {
+        Schema::create('academico_aprendizaje_servicio', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('aprendizaje_servicio_id')->unsigned();
             $table->integer('academico_id')->unsigned();
-            $table->integer('actividad_extension_id')->unsigned();
 
             $table->timestamps();
 
             //Relaciones
 
-            $table->foreign('academico_id')->references('id')->on('academicos')
+            $table->foreign('aprendizaje_servicio_id')->references('id')->on('aprendizaje_servicios')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreign('actividad_extension_id')->references('id')->on('actividad_extensions')
+            $table->foreign('academico_id')->references('id')->on('academicos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -39,6 +39,6 @@ class CreateAcademicoExtensionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('academico_extension');
+        Schema::dropIfExists('academico_aprendizaje_servicio');
     }
 }

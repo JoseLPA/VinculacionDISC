@@ -17,8 +17,6 @@ class CreateAprendizajeServiciosTable extends Migration
 
             $table->increments('id');
 
-            $table->string('nombre_asignatura',128);
-            $table->string('nombre_profesor',128);
             $table->integer('cantidad_estudiantes');
             $table->string('nombre_socio',128);
             $table->integer('semestre');

@@ -26,7 +26,7 @@
                             <tr>
                                 @if(Auth::user()->id == $aprendizajeServicio->user_id)
                                     <td>{{ $aprendizajeServicio->id }}</td>
-                                    <td>{{ $aprendizajeServicio->nombre_asignatura }}</td>
+                                    <td>{{ App\Asignatura::find($aprendizajeServicio->asignatura_id)->nombre_asignatura }}</td>
                                     <td width="10px">
                                         <a href="{{ route('aprendizajeServicio.show', $aprendizajeServicio->id) }}" class="btn btn-sm btn-primary">Ver</a>
                                     </td>

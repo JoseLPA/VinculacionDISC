@@ -17,7 +17,6 @@ class Actividad_ExtensionesTableSeeder extends Seeder
             'fecha' => '2018-12-20',
             'ubicacion' => 'UCN',
             'cantidad_asistentes' => '100',
-            'organizador_actividad' => 'Pedro',
             'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
             'user_id' => '1',
         ]);
@@ -28,7 +27,6 @@ class Actividad_ExtensionesTableSeeder extends Seeder
             'fecha' => '2018-12-24',
             'ubicacion' => 'UCN',
             'cantidad_asistentes' => '20',
-            'organizador_actividad' => 'Nicole',
             'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
             'user_id' => '1',
         ]);
@@ -39,7 +37,6 @@ class Actividad_ExtensionesTableSeeder extends Seeder
             'fecha' => '2018-12-20',
             'ubicacion' => 'UCN',
             'cantidad_asistentes' => '30',
-            'organizador_actividad' => 'José',
             'evidencia' => 'http://homestead.test/evidencia/GcY5Bq6o1hwQxsXi7TQ6fb4Byk6pBTHQAL1jiHbK.pdf',
             'user_id' => '2',
         ]);

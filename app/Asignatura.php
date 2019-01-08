@@ -15,6 +15,6 @@ class Asignatura extends Model
     }
 
     public function aprendizajeServicios(){
-        return $this->hasMany(AprendizajeServicio::class);
+        return $this->belongsToMany(AprendizajeServicio::class);
     }
 }

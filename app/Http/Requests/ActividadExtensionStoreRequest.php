@@ -30,7 +30,6 @@ class ActividadExtensionStoreRequest extends FormRequest
             'fecha' => 'required',
             'ubicacion' => 'required',
             'cantidad_asistentes' => 'required|integer',
-            'organizador_actividad' => 'required|regex:/^[a-zA-Z\s]+$/',
             'evidencia' => 'required|mimes:pdf,jpg,jpeg,png',
         ];
     }

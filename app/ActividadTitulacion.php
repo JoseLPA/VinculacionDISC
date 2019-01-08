@@ -13,11 +13,12 @@ class ActividadTitulacion extends Model
         'carrera_estudiante',
         'fecha_inicio',
         'fecha_termino',
-        'profesor_guia',
         'empresa',
         'evidencia',
         'user_id',
         'convenio_id',
+        'academico_id1',
+        'academico_id2',
     ];
 
     public function user(){
@@ -26,5 +27,9 @@ class ActividadTitulacion extends Model
 
     public function convenio(){
         return $this->belongsTo(Convenio::class);
+    }
+
+    public function academico(){
+        return $this->belongsTo(Academico::class);
     }
 }

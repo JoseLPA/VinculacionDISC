@@ -12,14 +12,24 @@
 
                     <div class = "card-body">
                         {!! Form::open(['route' => 'aprendizajeServicio.store', 'files' => true]) !!}
-
                         @include('aprendizaje_servicio.partials.form')
-
                         {!! Form::close() !!}
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+@endsection
+
+
+
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            $('#nombre_asignaturas').multiselect();
+        })
+    </script>
+
 
 @endsection

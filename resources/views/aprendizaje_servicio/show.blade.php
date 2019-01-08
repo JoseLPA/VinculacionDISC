@@ -12,8 +12,15 @@
                 </div>
 
                 <div class = "card-body">
-                    <p><strong>Nombre Asignatura: </strong>{{$aprendizajeServicio->nombre_asignatura}}</p>
-                    <p><strong>Nombre Profesor: </strong>{{$aprendizajeServicio->nombre_profesor}}</p>
+                    <p><strong>Nombre de la Asignatura: </strong>{{ App\Asignatura::find($aprendizajeServicio->asignatura_id)->nombre_asignatura }}</p>
+                    <p><strong>Nombre de los profesores: </strong></p>
+                    <ul>
+                        @foreach($academico_aprendizaje_servicios as $academico_aprendizaje_servicio)
+                            @if($academico_aprendizaje_servicio->aprendizaje_servicio_id == $aprendizajeServicio->id)
+                                <li> {{App\Academico::find($academico_aprendizaje_servicio->academico_id)->nombre_academico}}</li>
+                            @endif
+                        @endforeach
+                    </ul>
                     <p><strong>Cantidad Estudiantes: </strong>{{$aprendizajeServicio->cantidad_estudiantes}}</p>
                     <p><strong>Nombre Socio: </strong>{{$aprendizajeServicio->nombre_socio}}</p>
                     <p><strong>Semestre: </strong>{{$aprendizajeServicio->semestre}}</p>

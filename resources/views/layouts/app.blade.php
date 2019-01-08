@@ -18,6 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 </head>
 
 
@@ -196,11 +200,16 @@
                             <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
 
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar actividades de A+S</a>
 
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadExtension.index') }}">Administrar actividades de extensión</a>
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar actividades de A+S</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadTitulacion.index') }}">Administrar actividades de titulación</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('titulado.index') }}">Administrar titulados</a>
+
 
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -266,7 +275,6 @@
 <main class="py-4">
     @yield('content')
 </main>
-
 @yield('scripts')
 
 </body>

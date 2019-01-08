@@ -26,3 +26,5 @@ Route::get('AdmAprendizajeServicio','AprendizajeServicioController@index')->name
 Route::resource('aprendizajeServicio','AprendizajeServicioController');
 Route::get('AdmTitulado','TituladoController@index')->name('AdmTitulado');
 Route::resource('titulado','TituladoController');
+Route::get('AdmActividadTitulacion','ActividadTitulacionController@index')->name('AdmActividadTitulacion');
+Route::resource('actividadTitulacion','ActividadTitulacionController');

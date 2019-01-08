@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Academico;
 use App\ActividadExtension;
+use App\AcademicoActividadExtension;
 use App\ActividadExtensionConvenio;
 use App\Convenio;
 use App\Http\Requests\ActividadExtensionStoreRequest;
@@ -39,7 +41,8 @@ class ActividadExtensionController extends Controller
     public function create()
     {
         $convenios = Convenio::orderBy('id','ASC')->get();
-        return view('actividadExtension.create', compact('convenios'));
+        $academicos = Academico::orderBy('nombre_academico','ASC')->get();
+        return view('actividadExtension.create', compact('convenios','academicos'));
     }
 
     /**
@@ -62,6 +65,18 @@ class ActividadExtensionController extends Controller
                 $actividadExtensionConvenio->save();
             }
         }
+
+        $actividad_extension_academicos = $request->input('academicos');
+        if($actividad_extension_academicos != null){
+            foreach ($actividad_extension_academicos as $valor) {
+                $actividadExtensionAcademico = new AcademicoActividadExtension();
+                $actividadExtensionAcademico->fill($request->only('actividad_extension_id', 'academico_id'));
+                $actividadExtensionAcademico->actividad_extension_id = $actividadExtension->id;
+                $actividadExtensionAcademico->academico_id = $valor;
+                $actividadExtensionAcademico->save();
+            }
+        }
+
         //Evidencia
 
         if($request->file('evidencia')){
@@ -84,7 +99,8 @@ class ActividadExtensionController extends Controller
         $actividadExtension = ActividadExtension::find($id);
         $usuario = User::find($actividadExtension->user_id);
         $actividad_extension_convenios = ActividadExtensionConvenio::all();
-        return view('actividadExtension.show',compact('actividadExtension','usuario','actividad_extension_convenios'));
+        $academico_actividad_extensions = AcademicoActividadExtension::all();
+        return view('actividadExtension.show',compact('actividadExtension','usuario','actividad_extension_convenios','academico_actividad_extensions'));
     }
 
     /**
@@ -96,9 +112,10 @@ class ActividadExtensionController extends Controller
     public function edit($id)
     {
         $convenios = Convenio::orderBy('nombre_empresa','ASC')->get();
+        $academicos = Academico::orderBy('nombre_academico','ASC')->get();
         $actividadExtension = ActividadExtension::find($id);
 
-        return view('actividadExtension.edit',compact('actividadExtension','convenios'));
+        return view('actividadExtension.edit',compact('actividadExtension','convenios','academicos'));
     }
 
     /**
@@ -128,6 +145,13 @@ class ActividadExtensionController extends Controller
             }
         }
 
+        $academicoActividadExts = AcademicoActividadExtension::all();
+        foreach ($academicoActividadExts as $academicoActividadExt) {
+            if ($academicoActividadExt->actividad_extension_id == $actividadExtension->id) {
+                $academicoActividadExt->delete();
+            }
+        }
+
         $actividad_extension_convenios = $request->input('convenios');
         if($actividad_extension_convenios != null){
             foreach ($actividad_extension_convenios as $valor) {
@@ -136,6 +160,17 @@ class ActividadExtensionController extends Controller
                 $actividadExtensionConvenio->actividad_extension_id = $actividadExtension->id;
                 $actividadExtensionConvenio->convenio_id= $valor;
                 $actividadExtensionConvenio->save();
+            }
+        }
+
+        $actividad_extension_academicos = $request->input('academicos');
+        if($actividad_extension_academicos != null){
+            foreach ($actividad_extension_academicos as $valor) {
+                $actividadExtensionAcademico = new AcademicoActividadExtension();
+                $actividadExtensionAcademico->fill($request->only('actividad_extension_id', 'academico_id'));
+                $actividadExtensionAcademico->actividad_extension_id = $actividadExtension->id;
+                $actividadExtensionAcademico->academico_id = $valor;
+                $actividadExtensionAcademico->save();
             }
         }
 

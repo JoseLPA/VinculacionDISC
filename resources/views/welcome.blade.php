@@ -198,12 +198,13 @@
 
                             <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
 
-
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar actividades de A+S</a>
 
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadExtension.index') }}">Administrar actividades de extensión</a>
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar actividades de A+S</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadTitulacion.index') }}">Administrar actividades de titulación</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
 
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('titulado.index') }}">Administrar titulados</a>
 
@@ -221,7 +222,6 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
-
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
