@@ -912,73 +912,102 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="229" parent="2" name="actividad_extension_convenio">
+    <table id="229" parent="2" name="academico_actividad_extension">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="230" parent="2" name="actividad_extensions">
+    <table id="230" parent="2" name="academico_aprendizaje_servicio">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="231" parent="2" name="aprendizaje_servicio_convenio">
+    <table id="231" parent="2" name="academico_asignaturas">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="232" parent="2" name="aprendizaje_servicios">
+    <table id="232" parent="2" name="academicos">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="233" parent="2" name="convenios">
+    <table id="233" parent="2" name="actividad_extension_convenio">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="234" parent="2" name="migrations">
+    <table id="234" parent="2" name="actividad_extensions">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="235" parent="2" name="password_resets">
+    <table id="235" parent="2" name="actividad_titulacions">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="236" parent="2" name="users">
+    <table id="236" parent="2" name="aprendizaje_servicio_convenio">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <column id="237" parent="229" name="id">
+    <table id="237" parent="2" name="aprendizaje_servicios">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="238" parent="2" name="asignaturas">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="239" parent="2" name="convenios">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="240" parent="2" name="migrations">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="241" parent="2" name="password_resets">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="242" parent="2" name="titulados">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="243" parent="2" name="users">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <column id="244" parent="229" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="229" name="actividad_extension_id">
+    <column id="245" parent="229" name="academico_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="229" name="convenio_id">
+    <column id="246" parent="229" name="actividad_extension_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="229" name="created_at">
+    <column id="247" parent="229" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="229" name="updated_at">
+    <column id="248" parent="229" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="242" parent="229" name="actividad_extension_convenio_actividad_extension_id_foreign">
+    <index id="249" parent="229" name="academico_actividad_extension_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="250" parent="229" name="academico_actividad_extension_actividad_extension_id_foreign">
       <ColNames>actividad_extension_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="243" parent="229" name="actividad_extension_convenio_convenio_id_foreign">
-      <ColNames>convenio_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="244" parent="229" name="PRIMARY">
+    <key id="251" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="245" parent="229" name="actividad_extension_convenio_actividad_extension_id_foreign">
+    <foreign-key id="252" parent="229" name="academico_actividad_extension_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>academicos</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="253" parent="229" name="academico_actividad_extension_actividad_extension_id_foreign">
       <ColNames>actividad_extension_id</ColNames>
       <RefSchemaName>homestead</RefSchemaName>
       <RefTableName>actividad_extensions</RefTableName>
@@ -986,139 +1015,49 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="246" parent="229" name="actividad_extension_convenio_convenio_id_foreign">
-      <ColNames>convenio_id</ColNames>
-      <RefSchemaName>homestead</RefSchemaName>
-      <RefTableName>convenios</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
-    </foreign-key>
-    <column id="247" parent="230" name="id">
+    <column id="254" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="230" name="titulo_actividad">
-      <Position>2</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="249" parent="230" name="nombre_expositor">
-      <Position>3</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="250" parent="230" name="fecha">
-      <Position>4</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="251" parent="230" name="ubicacion">
-      <Position>5</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="252" parent="230" name="cantidad_asistentes">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="253" parent="230" name="organizador_actividad">
-      <Position>7</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="254" parent="230" name="evidencia">
-      <Position>8</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="255" parent="230" name="user_id">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="256" parent="230" name="created_at">
-      <Position>10</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="230" name="updated_at">
-      <Position>11</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="258" parent="230" name="actividad_extensions_user_id_foreign">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="259" parent="230" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="260" parent="230" name="actividad_extensions_user_id_foreign">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>homestead</RefSchemaName>
-      <RefTableName>users</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
-    </foreign-key>
-    <column id="261" parent="231" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="231" name="aprendizaje_servicio_id">
+    <column id="255" parent="230" name="aprendizaje_servicio_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="231" name="convenio_id">
+    <column id="256" parent="230" name="academico_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="231" name="created_at">
+    <column id="257" parent="230" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="231" name="updated_at">
+    <column id="258" parent="230" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="266" parent="231" name="aprendizaje_servicio_convenio_aprendizaje_servicio_id_foreign">
+    <index id="259" parent="230" name="academico_aprendizaje_servicio_aprendizaje_servicio_id_foreign">
       <ColNames>aprendizaje_servicio_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="267" parent="231" name="aprendizaje_servicio_convenio_convenio_id_foreign">
-      <ColNames>convenio_id</ColNames>
+    <index id="260" parent="230" name="academico_aprendizaje_servicio_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="268" parent="231" name="PRIMARY">
+    <key id="261" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="269" parent="231" name="aprendizaje_servicio_convenio_aprendizaje_servicio_id_foreign">
+    <foreign-key id="262" parent="230" name="academico_aprendizaje_servicio_aprendizaje_servicio_id_foreign">
       <ColNames>aprendizaje_servicio_id</ColNames>
       <RefSchemaName>homestead</RefSchemaName>
       <RefTableName>aprendizaje_servicios</RefTableName>
@@ -1126,7 +1065,157 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="270" parent="231" name="aprendizaje_servicio_convenio_convenio_id_foreign">
+    <foreign-key id="263" parent="230" name="academico_aprendizaje_servicio_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>academicos</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="264" parent="231" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="231" name="academico_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="231" name="asignatura_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="231" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="231" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="269" parent="231" name="academico_asignaturas_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="270" parent="231" name="academico_asignaturas_asignatura_id_foreign">
+      <ColNames>asignatura_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="271" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="272" parent="231" name="academico_asignaturas_academico_id_foreign">
+      <ColNames>academico_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>academicos</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="273" parent="231" name="academico_asignaturas_asignatura_id_foreign">
+      <ColNames>asignatura_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>asignaturas</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="274" parent="232" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="232" name="nombre_academico">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="276" parent="232" name="rut_academico">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="232" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="278" parent="232" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="279" parent="232" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="280" parent="233" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="233" name="actividad_extension_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="233" name="convenio_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="233" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="233" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="285" parent="233" name="actividad_extension_convenio_actividad_extension_id_foreign">
+      <ColNames>actividad_extension_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="286" parent="233" name="actividad_extension_convenio_convenio_id_foreign">
+      <ColNames>convenio_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="287" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="288" parent="233" name="actividad_extension_convenio_actividad_extension_id_foreign">
+      <ColNames>actividad_extension_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>actividad_extensions</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="289" parent="233" name="actividad_extension_convenio_convenio_id_foreign">
       <ColNames>convenio_id</ColNames>
       <RefSchemaName>homestead</RefSchemaName>
       <RefTableName>convenios</RefTableName>
@@ -1134,151 +1223,75 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="271" parent="232" name="id">
+    <column id="290" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="232" name="nombre_asignatura">
+    <column id="291" parent="234" name="titulo_actividad">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="232" name="nombre_profesor">
+    <column id="292" parent="234" name="nombre_expositor">
       <Position>3</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="232" name="cantidad_estudiantes">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="275" parent="232" name="nombre_socio">
-      <Position>5</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="276" parent="232" name="semestre">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="277" parent="232" name="año">
-      <Position>7</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="278" parent="232" name="evidencia">
-      <Position>8</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="279" parent="232" name="user_id">
-      <Position>9</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="280" parent="232" name="created_at">
-      <Position>10</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="281" parent="232" name="updated_at">
-      <Position>11</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="282" parent="232" name="aprendizaje_servicios_user_id_foreign">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="283" parent="232" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="284" parent="232" name="aprendizaje_servicios_user_id_foreign">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>homestead</RefSchemaName>
-      <RefTableName>users</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
-    </foreign-key>
-    <column id="285" parent="233" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="286" parent="233" name="nombre_empresa">
-      <Position>2</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="287" parent="233" name="tipo">
-      <Position>3</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="288" parent="233" name="fecha_inicio">
+    <column id="293" parent="234" name="fecha">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="233" name="evidencia">
+    <column id="294" parent="234" name="ubicacion">
       <Position>5</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="233" name="duracion">
+    <column id="295" parent="234" name="cantidad_asistentes">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="233" name="user_id">
+    <column id="296" parent="234" name="evidencia">
       <Position>7</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="234" name="user_id">
+      <Position>8</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="233" name="created_at">
-      <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="293" parent="233" name="updated_at">
+    <column id="298" parent="234" name="created_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="294" parent="233" name="convenios_user_id_foreign">
+    <column id="299" parent="234" name="updated_at">
+      <Position>10</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="300" parent="234" name="actividad_extensions_user_id_foreign">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="295" parent="233" name="PRIMARY">
+    <key id="301" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="296" parent="233" name="convenios_user_id_foreign">
+    <foreign-key id="302" parent="234" name="actividad_extensions_user_id_foreign">
       <ColNames>user_id</ColNames>
       <RefSchemaName>homestead</RefSchemaName>
       <RefTableName>users</RefTableName>
@@ -1286,113 +1299,582 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="297" parent="234" name="id">
+    <column id="303" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="234" name="migration">
+    <column id="304" parent="235" name="titulo_actividad">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="234" name="batch">
+    <column id="305" parent="235" name="nombre_estudiante">
       <Position>3</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="235" name="rut_estudiante">
+      <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="300" parent="234" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="301" parent="235" name="email">
-      <Position>1</Position>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="302" parent="235" name="token">
-      <Position>2</Position>
+    <column id="307" parent="235" name="carrera_estudiante">
+      <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="235" name="created_at">
-      <Position>3</Position>
+    <column id="308" parent="235" name="fecha_inicio">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="235" name="fecha_termino">
+      <Position>7</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="235" name="evidencia">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="235" name="user_id">
+      <Position>9</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="235" name="convenio_id">
+      <Position>10</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="235" name="academico_id1">
+      <Position>11</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="235" name="academico_id2">
+      <Position>12</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="235" name="created_at">
+      <Position>13</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="304" parent="235" name="password_resets_email_index">
-      <ColNames>email</ColNames>
+    <column id="316" parent="235" name="updated_at">
+      <Position>14</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="317" parent="235" name="actividad_titulacions_user_id_foreign">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="305" parent="236" name="id">
+    <index id="318" parent="235" name="actividad_titulacions_convenio_id_foreign">
+      <ColNames>convenio_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="319" parent="235" name="actividad_titulacions_academico_id1_foreign">
+      <ColNames>academico_id1</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="320" parent="235" name="actividad_titulacions_academico_id2_foreign">
+      <ColNames>academico_id2</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="321" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="322" parent="235" name="actividad_titulacions_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="323" parent="235" name="actividad_titulacions_convenio_id_foreign">
+      <ColNames>convenio_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>convenios</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="324" parent="235" name="actividad_titulacions_academico_id1_foreign">
+      <ColNames>academico_id1</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>convenios</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="325" parent="235" name="actividad_titulacions_academico_id2_foreign">
+      <ColNames>academico_id2</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>convenios</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="326" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="236" name="name">
+    <column id="327" parent="236" name="aprendizaje_servicio_id">
       <Position>2</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="236" name="rut">
+    <column id="328" parent="236" name="convenio_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="329" parent="236" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="330" parent="236" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="331" parent="236" name="aprendizaje_servicio_convenio_aprendizaje_servicio_id_foreign">
+      <ColNames>aprendizaje_servicio_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="332" parent="236" name="aprendizaje_servicio_convenio_convenio_id_foreign">
+      <ColNames>convenio_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="333" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="334" parent="236" name="aprendizaje_servicio_convenio_aprendizaje_servicio_id_foreign">
+      <ColNames>aprendizaje_servicio_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>aprendizaje_servicios</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="335" parent="236" name="aprendizaje_servicio_convenio_convenio_id_foreign">
+      <ColNames>convenio_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>convenios</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="336" parent="237" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="337" parent="237" name="cantidad_estudiantes">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="338" parent="237" name="nombre_socio">
       <Position>3</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="236" name="email">
+    <column id="339" parent="237" name="semestre">
       <Position>4</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="236" name="email_verified_at">
+    <column id="340" parent="237" name="año">
       <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="236" name="password">
+    <column id="341" parent="237" name="evidencia">
       <Position>6</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="236" name="remember_token">
+    <column id="342" parent="237" name="user_id">
       <Position>7</Position>
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="236" name="created_at">
+    <column id="343" parent="237" name="asignatura_id">
       <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="236" name="updated_at">
+    <column id="344" parent="237" name="created_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="314" parent="236" name="users_email_unique">
-      <ColNames>email</ColNames>
-      <Unique>1</Unique>
+    <column id="345" parent="237" name="updated_at">
+      <Position>10</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="346" parent="237" name="aprendizaje_servicios_user_id_foreign">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="315" parent="236" name="PRIMARY">
+    <index id="347" parent="237" name="aprendizaje_servicios_asignatura_id_foreign">
+      <ColNames>asignatura_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="348" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="316" parent="236" name="users_email_unique">
+    <foreign-key id="349" parent="237" name="aprendizaje_servicios_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="350" parent="237" name="aprendizaje_servicios_asignatura_id_foreign">
+      <ColNames>asignatura_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>asignaturas</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="351" parent="238" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="352" parent="238" name="nombre_asignatura">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="238" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="354" parent="238" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="355" parent="238" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="356" parent="239" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="239" name="nombre_empresa">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="239" name="tipo">
+      <Position>3</Position>
+      <DataType>enum(&apos;Capstone&apos;, &apos;Marco&apos;, &apos;Específico&apos;, &apos;A+S&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Capstone&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="239" name="fecha_inicio">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="239" name="evidencia">
+      <Position>5</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="361" parent="239" name="duracion">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="362" parent="239" name="user_id">
+      <Position>7</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="239" name="created_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="239" name="updated_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="365" parent="239" name="convenios_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="366" parent="239" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="367" parent="239" name="convenios_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="368" parent="240" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="240" name="migration">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="240" name="batch">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="371" parent="240" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="372" parent="241" name="email">
+      <Position>1</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="373" parent="241" name="token">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="374" parent="241" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="375" parent="241" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="376" parent="242" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="377" parent="242" name="nombre_titulado">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="378" parent="242" name="rut_titulado">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="379" parent="242" name="telefono">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="380" parent="242" name="correo_electronico">
+      <Position>5</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="381" parent="242" name="empresa">
+      <Position>6</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="382" parent="242" name="anio_titulacion">
+      <Position>7</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="242" name="carrera_estudiante">
+      <Position>8</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="384" parent="242" name="evidencia">
+      <Position>9</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="242" name="user_id">
+      <Position>10</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="242" name="created_at">
+      <Position>11</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="387" parent="242" name="updated_at">
+      <Position>12</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="388" parent="242" name="titulados_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="389" parent="242" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="390" parent="242" name="titulados_user_id_foreign">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>homestead</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="391" parent="243" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="243" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="243" name="rut">
+      <Position>3</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="394" parent="243" name="rol">
+      <Position>4</Position>
+      <DataType>enum(&apos;Administrador&apos;, &apos;Profesor&apos;, &apos;Secretario/a&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Profesor&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="395" parent="243" name="email">
+      <Position>5</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="396" parent="243" name="email_verified_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="397" parent="243" name="password">
+      <Position>7</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="243" name="remember_token">
+      <Position>8</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="243" name="created_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="243" name="updated_at">
+      <Position>10</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="401" parent="243" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="402" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="403" parent="243" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
