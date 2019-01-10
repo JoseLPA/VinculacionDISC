@@ -1,9 +1,10 @@
 @extends('layouts.app')
+@section('title','Administrar convenios')
 
 @section('content')
     <div class="container">
         <div class = "row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12 col-md-offset-2">
 
                 <div class = "card">
                     <div class = "card-header">
@@ -18,7 +19,6 @@
                                 <tr>
                                     <th width="10px">ID</th>
                                     <th>Nombre de la empresa</th>
-                                    <th>&nbsp;</th>
                                 </tr>
                             </thead>
                                 <tbody>
@@ -35,7 +35,7 @@
                                                 </td>
                                                 <td width="10px">
                                                     {!! Form::open(['route' => ['convenio.destroy', $convenio->id], 'method' => 'DELETE']) !!}
-                                                        <button class="btn btn-sm btn-danger">
+                                                        <button class="btn btn-sm btn-danger" onclick="return confirmar_accion();">
                                                             Eliminar
                                                         </button>
                                                     {!! Form::close() !!}
@@ -52,4 +52,12 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script>
+        function confirmar_accion() {
+            return confirm('¿Estás seguro de querer realizar esta acción?');
+        }
+    </script>
 @endsection

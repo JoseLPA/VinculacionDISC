@@ -11,13 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 </head>
 
 
@@ -190,12 +194,36 @@
 
                         <li class="nav-item dropdown ">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                Administración <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
 
-                                <a style="color:#FFFFFF" class="dropdown-item " href="{{ route('convenio.index') }}">Administrar Convenios</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar Actividades de A+S</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadExtension.index') }}">Administrar Actividades de Extensión</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadTitulacion.index') }}">Administrar Actividades de Titulación</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
+
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('titulado.index') }}">Administrar Titulados</a>
+
+
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown ">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
 
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
@@ -247,7 +275,33 @@
 <main class="py-4">
     @yield('content')
 </main>
+@yield('scripts')
 
 
+
+<div id="app" >
+    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                Vinculacion con el Medio
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <a style="color:#FFFFFF" href="http://www.ucn.cl/facultad-de-ingenieria-y-ciencias-geologicas/departamento-de-sistemas-y-computacion/ "> Departamento de Ingeniería de Sistemas y Computación</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 </body>
 </html>

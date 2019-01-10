@@ -25,11 +25,10 @@ class ConvenioUpdateRequest extends FormRequest
     {
         return [
             'user_id' => 'required|integer',
-            'nombre_empresa' => 'required',
+            'nombre_empresa' => 'required|regex:/^[a-zA-Z\s]+$/',
             'tipo' => 'required|in:Capstone,Marco,Específico,A+S',
             'fecha_inicio' => 'required',
-            'evidencia' => 'required',
-            'duracion' => 'required',
+            'convenio' => 'integer',
         ];
     }
 }

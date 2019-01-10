@@ -26,4 +26,8 @@ class Convenio extends Model
     public function aprendizajeServicios(){
         return $this->belongsToMany(AprendizajeServicio::class);
     }
+
+    public function actividadTitulacion(){
+        return $this->belongsTo(ActividadTitulacion::class);
+    }
 }

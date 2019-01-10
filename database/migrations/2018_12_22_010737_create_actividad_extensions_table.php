@@ -21,7 +21,6 @@ class CreateActividadExtensionsTable extends Migration
             $table->date('fecha');
             $table->string('ubicacion',128);
             $table->integer('cantidad_asistentes');
-            $table->string('organizador_actividad',128);
             $table->string('evidencia',128);
 
             $table->integer('user_id')->unsigned();

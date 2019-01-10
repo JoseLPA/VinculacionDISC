@@ -23,39 +23,30 @@
 </div>
 
 <div class="form-group">
-    {{ Form::label('actividad_extencion_id', 'Marque las actividades de extensión asociadas al convenio') }}
-    <div>
-        @foreach($actividadesExtension as $actividadExtension)
-            {{Form::checkbox('actividadesExtension[]', $actividadExtension->id)}} {{ $actividadExtension->titulo_actividad }}
-        @endforeach
-    </div>
-</div>
-
-<div class="form-group">
-    {{ Form::label('aprendizaje_servicios_id', 'Marque las actividades de A+S asociadas al convenio') }}
-    <div>
-        @foreach($aprendizajeServicios as $aprendizajeServicio)
-            {{Form::checkbox('aprendizajeServicios[]', $aprendizajeServicio->id)}} {{ $aprendizajeServicio->nombre_asignatura }}
-        @endforeach
-    </div>
-</div>
-
-<div class="form-group">
     {{ Form::label('fecha_inicio', 'Fecha de inicio') }}
     {{ Form::date('fecha_inicio', null, array('class' => 'form-control')) }}
 </div>
 
 <div class="form-group">
-    {{ Form::label('duracion', 'Duracion del convenio') }}
+    {{ Form::label('duracion', 'Duración del convenio (Años)') }}
     {{ Form::text('duracion', null, ['class' => 'form-control']) }}
 </div>
 
 <div class="form-group">
-    {{ Form::label('evidencia', 'Evidencia') }}
+    {{ Form::label('evidencia', 'Evidencia (Formato .pdf)') }}
     {{ Form::file('evidencia') }}
 </div>
 
 <div class="form-group">
     {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary float-right']) }}
-    <a href="{{ route( 'convenio.index' )}}" class="btn btn-sm btn-primary float-left">Atrás</a>
+    <a href="{{ route( 'AdmConvenio' )}}" class="btn btn-sm btn-primary float-left">Atrás</a>
 </div>
+
+
+@section('scripts')
+    <script>
+        function confirmar_accion() {
+            return confirm('¿Estás seguro de querer realizar esta acción?');
+        }
+    </script>
+@endsection

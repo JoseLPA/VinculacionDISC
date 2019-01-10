@@ -7,14 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class AprendizajeServicio extends Model
 {
     protected $fillable = [
-        'nombre_asignatura',
-        'nombre_profesor',
         'cantidad_estudiantes',
         'nombre_socio',
         'semestre',
         'año',
         'evidencia',
         'user_id',
+        'asignatura_id',
     ];
 
     public function user(){
@@ -23,5 +22,13 @@ class AprendizajeServicio extends Model
 
     public function convenios(){
         return $this->belongsToMany(Convenio::class);
+    }
+
+    public function academicos(){
+        return $this->belongsToMany(Academico::class);
+    }
+
+    public function asignatura(){
+        return $this->belongsTo(Asignatura::class);
     }
 }

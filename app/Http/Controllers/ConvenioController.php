@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\ActividadExtension;
 use App\AprendizajeServicio;
 use App\Convenio;
-
+use App\ContadorRegistro;
 use App\ActividadExtensionConvenio;
 use App\AprendizajeServicioConvenio;
 
@@ -17,6 +17,7 @@ use App\Http\Requests\ConvenioStoreRequest;
 use App\Http\Requests\ConvenioUpdateRequest;
 class ConvenioController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -41,9 +42,7 @@ class ConvenioController extends Controller
      */
     public function create()
     {
-        $actividadesExtension = ActividadExtension::orderBy('id','ASC')->get();
-        $aprendizajeServicios = AprendizajeServicio::orderBy('nombre_asignatura', 'ASC')->get();
-        return view('convenio.create', compact('actividadesExtension','aprendizajeServicios'));
+        return view('convenio.create');
     }
 
     /**
@@ -56,32 +55,18 @@ class ConvenioController extends Controller
     {
         $convenio = Convenio::create($request->all());
 
-        $actividad_extension_convenios = $request->input('actividadesExtension');
-        if($actividad_extension_convenios != null){
-            foreach ($actividad_extension_convenios as $valor) {
-                $actividadExtensionConvenio = new ActividadExtensionConvenio();
-                $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
-                $actividadExtensionConvenio->actividad_extension_id = $valor;
-                $actividadExtensionConvenio->convenio_id= $convenio->id;
-                $actividadExtensionConvenio->save();
-            }
-        }
-        $aprendizaje_servicio_convenios = $request->input('aprendizajeServicios');
-        if($aprendizaje_servicio_convenios != null){
-            foreach ($aprendizaje_servicio_convenios as $valor) {
-                $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
-                $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
-                $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
-                $aprendizajeServicioConvenio->convenio_id= $convenio->id;
-                $aprendizajeServicioConvenio->save();
-            }
-        }
+
         //Evidencia
 
         if($request->file('evidencia')){
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $convenio->fill(['evidencia' => asset($path)])->save();
         }
+
+        $contador=Convenio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_convenio = $contador;
+        $contadorRegistro->save();
 
         return redirect()->route('convenio.index')
             ->with('info','Convenio creado con éxito');
@@ -110,11 +95,9 @@ class ConvenioController extends Controller
      */
     public function edit($id)
     {
-        $actividadesExtension = ActividadExtension::orderBy('titulo_actividad','ASC')->get();
-        $aprendizajeServicios = AprendizajeServicio::orderBy('nombre_asignatura', 'ASC')->get();
         $convenio = Convenio::find($id);
 
-        return view('convenio.edit',compact('convenio','actividadesExtension','aprendizajeServicios'));
+        return view('convenio.edit',compact('convenio'));
     }
 
     /**
@@ -130,48 +113,6 @@ class ConvenioController extends Controller
 
         $convenio->fill($request->all())->save();
 
-        /**
-         * Se deben eliminar las actividades
-         * antes de poder actualizar los datos.
-         * Si no se eliminan, los datos no cambiaran.
-         */
-
-        //elimina las actividades de Extensión
-        $actiExtencionConvenios = ActividadExtensionConvenio::all();
-        foreach ($actiExtencionConvenios as $actiExtencionConvenio) {
-            if ($actiExtencionConvenio->convenio_id == $convenio->id) {
-                $actiExtencionConvenio->delete();
-            }
-        }
-
-        //elimina las actividades A+S asociadas
-        $aprenServicioConvenios = AprendizajeServicioConvenio::all();
-        foreach ($aprenServicioConvenios as $aprenServicioConvenio) {
-            if ($aprenServicioConvenio->convenio_id == $convenio->id) {
-                $aprenServicioConvenio->delete();
-            }
-        }
-
-        $actividad_extension_convenios = $request->input('actividadesExtension');
-        if($actividad_extension_convenios != null){
-            foreach ($actividad_extension_convenios as $valor) {
-                $actividadExtensionConvenio = new ActividadExtensionConvenio();
-                $actividadExtensionConvenio->fill($request->only('actividad_extension_id', 'convenio_id'));
-                $actividadExtensionConvenio->actividad_extension_id = $valor;
-                $actividadExtensionConvenio->convenio_id= $convenio->id;
-                $actividadExtensionConvenio->save();
-            }
-        }
-        $aprendizaje_servicio_convenios = $request->input('aprendizajeServicios');
-        if($aprendizaje_servicio_convenios != null){
-            foreach ($aprendizaje_servicio_convenios as $valor) {
-                $aprendizajeServicioConvenio = new AprendizajeServicioConvenio();
-                $aprendizajeServicioConvenio->fill($request->only('aprendizaje_servicio_id', 'convenio_id'));
-                $aprendizajeServicioConvenio->aprendizaje_servicio_id = $valor;
-                $aprendizajeServicioConvenio->convenio_id= $convenio->id;
-                $aprendizajeServicioConvenio->save();
-            }
-        }
         if($request->file('evidencia')){
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $convenio->fill(['evidencia' => asset($path)])->save();
@@ -190,6 +131,11 @@ class ConvenioController extends Controller
     public function destroy($id)
     {
         Convenio::find($id)->delete();
+
+        $contador=Convenio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_convenio = $contador;
+        $contadorRegistro->save();
 
         return back()->with('info','Eliminado correctamente');
     }
