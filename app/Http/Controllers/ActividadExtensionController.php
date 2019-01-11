@@ -10,8 +10,10 @@ use App\Convenio;
 use App\Http\Requests\ActividadExtensionStoreRequest;
 use App\Http\Requests\ActividadExtensionUpdateRequest;
 use App\User;
+use App\ContadorRegistro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
 
 class ActividadExtensionController extends Controller
 {
@@ -83,6 +85,12 @@ class ActividadExtensionController extends Controller
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $actividadExtension->fill(['evidencia' => asset($path)])->save();
         }
+
+        $contador=ActividadExtension::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_extension = $contador;
+        $contadorRegistro->save();
+
 
         return redirect()->route('actividadExtension.index')
             ->with('info','Actividad de extensión creado con éxito');
@@ -192,6 +200,12 @@ class ActividadExtensionController extends Controller
     public function destroy($id)
     {
         ActividadExtension::find($id)->delete();
+
+        $contador=ActividadExtension::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_extension = $contador;
+        $contadorRegistro->save();
+
 
         return back()->with('info','Eliminado correctamente');
     }

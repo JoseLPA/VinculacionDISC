@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\ActividadExtension;
 use App\AprendizajeServicio;
 use App\Convenio;
-
+use App\ContadorRegistro;
 use App\ActividadExtensionConvenio;
 use App\AprendizajeServicioConvenio;
 
@@ -64,8 +64,15 @@ class ConvenioController extends Controller
             $convenio->fill(['evidencia' => asset($path)])->save();
         }
 
+        $contador=Convenio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_convenio = $contador;
+        $contadorRegistro->save();
+
         return redirect()->route('convenio.index')
             ->with('info','Convenio creado con éxito');
+        
+
     }
 
     /**
@@ -127,6 +134,11 @@ class ConvenioController extends Controller
     public function destroy($id)
     {
         Convenio::find($id)->delete();
+
+        $contador=Convenio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_convenio = $contador;
+        $contadorRegistro->save();
 
         return back()->with('info','Eliminado correctamente');
     }

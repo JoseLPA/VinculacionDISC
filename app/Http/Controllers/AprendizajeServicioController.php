@@ -10,6 +10,7 @@ use App\Convenio;
 use App\Http\Requests\AprendizajeServicioStoreRequest;
 use App\Http\Requests\AprendizajeServicioUpdateRequest;
 use App\User;
+use App\ContadorRegistro;
 use Illuminate\Http\Request;
 use App\AprendizajeServicio;
 use Illuminate\Support\Facades\Storage;
@@ -80,6 +81,11 @@ class AprendizajeServicioController extends Controller
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $aprendizajeServicio->fill(['evidencia' => asset($path)])->save();
         }
+
+        $contador= AprendizajeServicio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_aprendizaje_servicio = $contador;
+        $contadorRegistro->save();
 
         return redirect()->route('aprendizajeServicio.index')
             ->with('info','Actividad A+S creado con éxito');
@@ -158,6 +164,12 @@ class AprendizajeServicioController extends Controller
     public function destroy($id)
     {
         AprendizajeServicio::find($id)->delete();
+
+        $contador= AprendizajeServicio::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_aprendizaje_servicio = $contador;
+        $contadorRegistro->save();
+
         return back()->with('info', 'Eliminado correctamente');
     }
 }

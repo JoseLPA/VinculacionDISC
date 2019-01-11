@@ -2,8 +2,8 @@
 
 
 <div class ="form-group">
-    {{Form::label('asignatura_id','ASIGNATURA')}}
-    <div>
+    {{Form::label('asignatura_id','Eliga la asignatura asociada a la actividad')}}
+    <div class="form-group">
         {{ Form::select('asignatura_id', $asignaturas->pluck('nombre_asignatura', 'id')) }}
     </div>
 </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TituladoStoreRequest;
 use App\Http\Requests\TituladoUpdateRequest;
-
+use App\ContadorRegistro;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
@@ -55,6 +55,11 @@ class TituladoController extends Controller
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $titulado->fill(['evidencia' => asset($path)])->save();
         }
+
+        $contador=Titulado::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_titulado = $contador;
+        $contadorRegistro->save();
 
         return redirect()->route('titulado.index')
             ->with('info','Titulado creado con éxito');
@@ -116,6 +121,11 @@ class TituladoController extends Controller
     public function destroy($id)
     {
         Titulado::find($id)->delete();
+
+        $contador=Titulado::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_titulado = $contador;
+        $contadorRegistro->save();
 
         return back()->with('info','Eliminado correctamente');
     }

@@ -22,6 +22,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+
+
 </head>
 
 
@@ -200,15 +202,15 @@
                             <div class="dropdown-menu dropdown-menu-rightD" aria-labelledby="navbarDropdown">
 
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar actividades de A+S</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('aprendizajeServicio.index') }}">Administrar Actividades de A+S</a>
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadExtension.index') }}">Administrar actividades de extensión</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadExtension.index') }}">Administrar Actividades de extensión</a>
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadTitulacion.index') }}">Administrar actividades de titulación</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('actividadTitulacion.index') }}">Administrar Actividades de titulación</a>
 
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('convenio.index') }}">Administrar Convenios</a>
 
-                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('titulado.index') }}">Administrar titulados</a>
+                                <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('titulado.index') }}">Administrar Titulados</a>
 
 
 
@@ -228,7 +230,7 @@
                                 <a style="color:#FFFFFF" class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Cerrar sesión') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -276,6 +278,31 @@
     @yield('content')
 </main>
 @yield('scripts')
+
+<div id="app" >
+    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                Vinculacion con el Medio
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <a style="color:#FFFFFF" href="http://www.ucn.cl/facultad-de-ingenieria-y-ciencias-geologicas/departamento-de-sistemas-y-computacion/ "> Departamento de Ingeniería de Sistemas y Computación</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
 </body>
 </html>

@@ -8,6 +8,7 @@ use App\Convenio;
 use App\Http\Requests\ActividadTitulacionStoreRequest;
 use App\Http\Requests\ActividadTitulacionUpdateRequest;
 use App\User;
+use App\ContadorRegistro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -59,6 +60,11 @@ class ActividadTitulacionController extends Controller
             $path = Storage::disk('public')->put('evidencia',$request->file('evidencia'));
             $actividadTitulacion->fill(['evidencia' => asset($path)])->save();
         }
+
+        $contador=ActividadTitulacion::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_actividad_titulacion = $contador;
+        $contadorRegistro->save();
 
         return redirect()->route('actividadTitulacion.index')
             ->with('info','Titulado creado con éxito');
@@ -122,6 +128,11 @@ class ActividadTitulacionController extends Controller
     public function destroy($id)
     {
         ActividadTitulacion::find($id)->delete();
+
+        $contador=ActividadTitulacion::count();
+        $contadorRegistro=ContadorRegistro::find('1');
+        $contadorRegistro->contador_actividad_titulacion = $contador;
+        $contadorRegistro->save();
 
         return back()->with('info','Eliminado correctamente');
     }
