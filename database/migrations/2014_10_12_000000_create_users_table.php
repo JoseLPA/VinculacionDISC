@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name',128);
             $table->string('rut',128);
+            $table->enum('rol', ['Administrador', 'Profesor','Secretaria'])->default('Profesor');
             $table->string('email', 128)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password',128);

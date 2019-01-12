@@ -14,13 +14,13 @@ class CreateConveniosTable extends Migration
     public function up()
     {
         Schema::create('convenios', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');//Se incrementa automaticamente
 
             $table->string('nombre_empresa',128);
-            $table->string('tipo',128);
+            $table->enum('tipo', ['Capstone', 'Marco','Específico','A+S'])->default('Capstone');
             $table->date('fecha_inicio');
-            $table->string('evidencia',128);
-            $table->integer('duracion');
+            $table->string('evidencia',128)->nullable();
+            $table->integer('duracion')->nullable();
 
             $table->integer('user_id')->unsigned();
 

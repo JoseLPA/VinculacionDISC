@@ -14,8 +14,25 @@ class UsersTableSeeder extends Seeder
         App\User::create([
            'name' => 'Jose Peña',
             'rut' => '18128077-8',
+            'rol' => 'Administrador',
             'email' => 'jose@email.com',
             'password' => bcrypt('123')
+        ]);
+
+        App\User::create([
+            'name' => 'Maikel Carvajal',
+            'rut' => '19397790-1',
+            'rol' => 'Profesor',
+            'email' => 'maikel@email.com',
+            'password' => bcrypt('321')
+        ]);
+
+        App\User::create([
+            'name' => 'Nicole Pérez',
+            'rut' => '87654321',
+            'rol' => 'Secretaria',
+            'email' => 'nicole@email.com',
+            'password' => bcrypt('123456')
         ]);
     }
 }

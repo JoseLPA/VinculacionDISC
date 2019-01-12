@@ -9,7 +9,6 @@ $factory->define(App\ActividadExtension::class, function (Faker $faker) {
         'fecha',
         'ubicacion',
         'cantidad_asistentes',
-        'organizador_actividad',
         'evidencia',
         'user_id',
 
